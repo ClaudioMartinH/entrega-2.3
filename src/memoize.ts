@@ -28,5 +28,6 @@ const fib = memoize((n: number) => {
     return fib(n -1) + fib(n -2);
 });
 
+
 console.log(fib(5))
 console.log("times function is fired with memoize: ", count);
