@@ -1,9 +1,9 @@
 
-function memoize(fn: Function): Function {
-    let cache: [key: string];   // arreglar esto
-    return (...args: any[number]) => {
+export function memoize(fn: Function): Function {
+    let cache: {[key: string]: any} = {};  
+    return (...args: any[]) => {
         let key = args.join(",");
-        if (key in cache) {
+        if (cache[key]) {
             return cache[key];
         }
         cache[key] = fn.apply(null, args);
@@ -11,23 +11,39 @@ function memoize(fn: Function): Function {
     }
 }
 
-let count: number = 0;
-function fibonacci(n: number): number {
-    count++;
+let count: number;
+
+export function restartCount(): number {
+    return count = 0;
+};
+export function addCount(): number {
+    return count++;
+}
+export function getCount(): number {
+    return count;
+}
+
+restartCount();
+
+export function fibonacci(n: number): number {
+    addCount();
     if (n <= 1) return n;
     return fibonacci(n -1) + fibonacci(n - 2);
 }
 
 console.log(fibonacci(5))
-console.log("times function is fired without memoize: ", count);
+console.log("times function is fired without memoize: ", getCount());
 
+restartCount();
 
-const fib = memoize((n: number) => {
-    count++;
+export const fib = memoize((n: number) => {
     if (n <= 1) return n;
+    addCount();
     return fib(n -1) + fib(n -2);
 });
 
-
 console.log(fib(5))
-console.log("times function is fired with memoize: ", count);
+console.log("times function is fired with memoize: ", getCount());
+
+
+
