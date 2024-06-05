@@ -2,6 +2,7 @@
   "name": "entrega-2.3",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "vitest",
     "cli": "node ./dist/appCLI.js",
