@@ -9,6 +9,7 @@ export function memoize(fn: Function): Function {
         cache[key] = fn.apply(null, args);
         return cache[key];
     }
+
 }
 
 let count: number;
