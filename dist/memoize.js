@@ -20,21 +20,15 @@ export function addCount() {
 export function getCount() {
     return count;
 }
-restartCount();
 export function fibonacci(n) {
     addCount();
     if (n <= 1)
         return n;
     return fibonacci(n - 1) + fibonacci(n - 2);
 }
-console.log(fibonacci(5));
-console.log("times function is fired without memoize: ", getCount());
-restartCount();
 export const fib = memoize((n) => {
     if (n <= 1)
         return n;
     addCount();
     return fib(n - 1) + fib(n - 2);
 });
-console.log(fib(5));
-console.log("times function is fired with memoize: ", getCount());

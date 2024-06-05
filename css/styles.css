@@ -7,10 +7,23 @@ body {
     font-size: large;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: aliceblue;
+    text-align: center;
     border-radius: 5px;
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
     background-color: rgba(0, 0, 0, 0.511);
+}
+div {
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgba(255, 228, 196, 0.532);
+    color: black;
+
 }

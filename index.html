@@ -5,23 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Memoize</title>
     <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <script type="module" src="./dist/memoize.js"></script>
-    <script>
-        import {fibonacci} from "./dist/memoize.js"
-    </script>
+   </head>
+  <body> 
     <div class="encabezado">Bienvenidos a la funcion Fibonacci con Memoize</div>
     <div class="cuerpo">
       <p>
         Veremos la diferencia entre una funcion con memoize y una sin, veremos
         la carga que supone para la cpu
       </p>
+      <p>Introduce el número del cual quieres saber su
+        posicion en fibonacci</p>
       <p>
-        <input type="text" id="txtUs"/>Introduce el número del cual quieres saber su
-        posicion en fibonacci
+        <input type="text" id="txtUs" title="Introduce aquí el número" placeholder="Introduce aquí el número"/>
       </p>
-      <button onclick="fibonacci()">Clic aquí para comprobar</button>
+      <p id="results">Resultados:</p>
+      <button id="btn1">Clic aquí para comprobar</button>
+      <script type="module">
+        import {fibonacciFront} from "./dist/front.js";
+        document.getElementById("btn1").addEventListener("click", fibonacciFront);
+      </script>
     </div>
     
   </body>

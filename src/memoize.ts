@@ -24,7 +24,6 @@ export function getCount(): number {
     return count;
 }
 
-restartCount();
 
 export function fibonacci(n: number): number {
     addCount();
@@ -32,19 +31,12 @@ export function fibonacci(n: number): number {
     return fibonacci(n -1) + fibonacci(n - 2);
 }
 
-console.log(fibonacci(5))
-console.log("times function is fired without memoize: ", getCount());
-
-restartCount();
 
 export const fib = memoize((n: number) => {
     if (n <= 1) return n;
     addCount();
     return fib(n -1) + fib(n -2);
 });
-
-console.log(fib(5))
-console.log("times function is fired with memoize: ", getCount());
 
 
 
