@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Memoize</title>
-    <link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
     <script type="module" src="./dist/memoize.js"></script>
-    <div class="encabezado">Bienvenidos a la funcion Fibonacci con Memoize </div>
+    <script>
+        import {fibonacci} from "./dist/memoize.js"
+    </script>
+    <div class="encabezado">Bienvenidos a la funcion Fibonacci con Memoize</div>
+    <div class="cuerpo">
+      <p>
+        Veremos la diferencia entre una funcion con memoize y una sin, veremos
+        la carga que supone para la cpu
+      </p>
+      <p>
+        <input type="text" id="txtUs"/>Introduce el número del cual quieres saber su
+        posicion en fibonacci
+      </p>
+      <button onclick="fibonacci()">Clic aquí para comprobar</button>
+    </div>
     
-    
-</body>
+  </body>
 </html>
