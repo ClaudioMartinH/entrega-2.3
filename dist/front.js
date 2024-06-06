@@ -1,12 +1,12 @@
-import { restartCount, getCount, fibonacci } from "./memoize.js";
-let txtUs = document.getElementById("txtUS");
-let results = document.getElementById("results");
-console.log(txtUs);
-console.log(results);
-restartCount();
+import { restartCount, getCount, fibonacci, fib } from "./memoize.js";
+const results = document.getElementById("results");
+const results2 = document.getElementById("results2");
 export function fibonacciFront() {
-    if (txtUs !== null && results !== null) {
-        let numUs = parseInt(txtUs.innerHTML);
-        results.innerHTML = `La posición de ${numUs} en fibonacci es: ${fibonacci(numUs)} y la funcion se ha disparado ${getCount} veces`;
+    let numUs = 5;
+    if (results !== null && results2 !== null) {
+        restartCount();
+        results.innerHTML = `Sin memoize: La posición de ${numUs} en fibonacci es: ${fibonacci(numUs) + 1} y la funcion se ha disparado ${getCount()} veces`;
+        restartCount();
+        results2.innerHTML = `Con memoize: La posición de ${numUs} en fibonacci es: ${fib(numUs) + 1} y la función se ha disparado ${getCount()} veces`;
     }
 }

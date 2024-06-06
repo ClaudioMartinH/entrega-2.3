@@ -24,6 +24,38 @@ div {
     padding-top: 5px;
     padding-bottom: 5px;
     background-color: rgba(255, 228, 196, 0.532);
-    color: black;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 139, 139, 0.51);
 
 }
+p {
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgba(255, 228, 196, 0.532);
+    color: rgb(255, 250, 250);
+    background-color: rgba(0, 139, 139, 0.51);
+    
+}
+footer {
+    background: rgba(0, 0, 0, 0.616);
+    color: azure;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: small;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+     width: auto;
+    margin: auto;
+    padding: auto;
+  }

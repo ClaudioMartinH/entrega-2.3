@@ -5,28 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Memoize</title>
     <link rel="stylesheet" href="./css/styles.css" />
-   </head>
-  <body> 
+  </head>
+  <body>
     <div class="encabezado">Bienvenidos a la funcion Fibonacci con Memoize</div>
     <div class="cuerpo">
       <p>
         Veremos la diferencia entre una funcion con memoize y una sin, veremos
-        la carga que supone para la cpu
+        la carga de procesos que conlleva no usarla.
       </p>
-      <p>Introduce el número del cual quieres saber su
-        posicion en fibonacci</p>
-      <p>
-        <input type="text" id="txtUs" title="Introduce aquí el número" placeholder="Introduce aquí el número"/>
-      </p>
-      <p id="results">Resultados:</p>
-      <button id="btn1">Clic aquí para comprobar</button>
-      <script type="module">
-        import {fibonacciFront} from "./dist/front.js";
-        document.getElementById("btn1").addEventListener("click", fibonacciFront);
-      </script>
     </div>
-    
+    <p>Recordemos que fibonacci suma a un numero n su n-1 y su n-2</p>
+    <p>posición de números en Fibonacci [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597]</p>
+    <p>Comprobaremos por ejemplo el número 5 con la función normal y con memoize</p>
+    <button id="btn1">Clic aquí para comprobar</button>
+    <div id="results"></div>
+    <div id="results2"></div>
+    <script type="module">
+      import { fibonacciFront } from "./dist/front.js";
+      document.getElementById("btn1").addEventListener("click", fibonacciFront);
+    </script>
   </body>
-  <footer><a href="https://github.com/ClaudioMartinH/">Claudio Martin Herranz 2024</a> || <a href="https://itacademy.barcelonactiva.cat/login/index.php">ITAcademy Barcelona Activa</a>    
+  <footer>
+    <a href="https://github.com/ClaudioMartinH/">Claudio Martin Herranz 2024</a>
+    ||
+    <a href="https://itacademy.barcelonactiva.cat/login/index.php"
+      >ITAcademy Barcelona Activa</a
+    >
   </footer>
 </html>
