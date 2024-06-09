@@ -1,7 +1,7 @@
 # memoize function
 
 Esta entrega trata de entender y aplicar la funcionalidad memoize a una función para que ésta no se ejecute continuamente cuando se llame siempre con los mismos parámetros, sino que sea capaz de almacenar en caché el resultado para evitar así su ejecucuión continua.
-Como veremos en el ejemplo que he creado, basándome en la secuencia Fibonacci, se puede apreciar la carga de procesos en cpu usando memoize y no usandolo.
+Como veremos en el ejemplo que he creado, basándome en la secuencia Fibonacci, se puede apreciar la diferencia de número de ejecuciones de la función.
 
 - Para ejecutar el proyecto hay que descargar el repositorio y tener instalado en el ordenador **nodejs**.
 - Para instalar dependencias basta con ejecutar el comando **npm install** en consola en la carpeta del proyecto.
